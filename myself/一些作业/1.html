@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = []
+        let arr2 = []
+        let sum = 0
+        for (let i = 0; i < 5; i++) {
+            let a = prompt(`请输入第${i + 1}个年龄`)
+            a = parseInt(a)
+            if (a > 100 || a < 0) {
+                alert(`该数字无效,请重新输入`)
+                continue;
+            } else {
+                arr.push(a)
+                sum += a
+            }
+            console.log(arr)
+
+            if (a > 18) {    //找出这个数组大于18所有的元素
+                arr2.push(a)
+            }
+            console.log(arr2);
+
+            console.log(sum);
+            
+        }
+
+       
+
+
+
+
+
+    </script>
+</body>
+
+</html>

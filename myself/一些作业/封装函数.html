@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.封装函数,名字为sum
+        // 2.功能: 根据传入的两个数,求和并且返回求和的结果(函数必须有return返回值)
+
+        function sum (a,b){
+            let c = a+b
+            console.log(c);
+            return c;
+            
+            
+        }
+
+        let num1 = +prompt(`请输入第一个数字`);
+        let num2 = +prompt(`请输入第二个数字`);
+        let sout = sum(num1, num2);
+        document.write(sout)
+    </script>
+</body>
+</html>

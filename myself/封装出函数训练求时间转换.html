@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt(`请输入您的秒数`)
+        function timeOut(t) {
+            h = parseInt(t / 60 / 60 % 24)
+            m = parseInt(t / 60 % 60)
+            s = parseInt(t % 60)
+
+            h = h < 10 ? "0" +h : h
+            m = m < 10 ? "0" +m : m
+            s = s < 10 ? "0" +s : s
+            console.log(`${t}此秒数的转换为：${h}时${m}分${s}秒`);
+            
+            return `${t}此秒数的转换为：${h}时${m}分${s}秒`;
+        }
+        let sout = timeOut(a)
+      document.write(sout)
+    </script>
+</body>
+
+</html>

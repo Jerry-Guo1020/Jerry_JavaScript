@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   /* 选择器.bun用于选择所有类名为bun的按钮元素 */
+.bun {
+    /* 设置按钮的背景颜色为青色 */
+    background-color: pink;
+
+    /* 去掉按钮默认的边框样式 */
+    border: none; 
+
+    /* 设置按钮的圆角为10像素，使按钮看起来更柔和 */
+    border-radius: 10px;
+
+    /* 设置按钮的内边距，使按钮内部的文字看起来更舒适 */
+    padding: 10px 20px;
+
+    /* 设置按钮的字体颜色为白色 */
+    color: white;
+
+    /* 设置按钮的字体大小为16像素 */
+    font-size: 16px;
+
+    /* 设置按钮的字体为微软雅黑 */
+    font-family: '微软雅黑', sans-serif;
+
+    /* 设置按钮放在页面的中间 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* translate(-50%, -50%)表示将按钮移动到页面的中心 */
+}
+
+/* 设置按钮的鼠标悬停效果，当鼠标悬停在按钮上时，背景颜色变为深青色 */
+.bun:hover {
+    background-color: darkcyan;
+}
+
+/* 设置按钮的点击效果，当按钮被点击时，背景颜色变为深蓝色 */
+.bun:active {
+    background-color: darkblue;
+}
+
+</style>
+<body>
+<button class="bun">hahahaah</button>
+
+    <script>
+        let btn = document.querySelector(`button`)
+        btn.onclick = function() {
+            alert(`今天天气真好`)
+        }
+    </script>
+</body>
+</html>

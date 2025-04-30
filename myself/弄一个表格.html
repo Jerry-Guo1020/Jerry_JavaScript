@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .box {
+        display: flex;
+        width: 700px;
+        height: 300px;
+        border-left: 1px solid pink;
+        border-bottom: 1px solid pink;
+        margin: 50px auto;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+
+    .box div {
+        display: flex;
+        width: 50px;
+        background-color: pink;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    .box div span {
+        margin-top: -20px;
+
+    }
+
+
+    .box div h4 {
+        margin-bottom: -35px;
+        width: 70px;
+        margin-left: -10px;
+    }
+</style>
+
+<body>
+    <!-- <div class="box">
+        <div style="height: 123px;">
+            <span>123</span>
+            <h4>
+            第一季度
+            </h4>
+        </div>
+
+        <div style="height: 256px;">
+            <span>256</span>
+            <h4>
+            第二季度
+            </h4>
+        </div>
+
+        <div style="height: 312px;">
+            <span>312</span>
+            <h4>
+            第三季度
+            </h4>
+        </div>
+
+        <div style="height: 478px;">
+            <span>478</span>
+            <h4>
+            第四季度
+            </h4>
+        </div>
+    </div> -->
+
+    <script>
+        let arr = []
+        for (let i = 1; i < 5; i++) {
+            // let num = prompt(`请输入第${i}季度的数据：`)
+            // arr.push(num)
+
+            arr.push(prompt(`请输入第${i}季度的数据：`))
+
+
+        }
+        //开头
+        document.write(`<div class="box">`)
+
+        // 盒子的中间
+
+        for (let i = 0; i < arr.length; i++) {
+            document.write(`<div style="height: ${arr[i]}px;">
+                            <span>${arr[i]}</span>
+                            <h4>第${i+1}季度</h4>
+                            </div>`)            
+        }
+
+        //尾巴
+        document.write(`</div>`)
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+
+    </style>
+<input id ="change" type="text" placeholder="请鼠标指向这里">
+<img id ="yaoshui" src="../in class/">
+    <script>
+        let input =  document.getElementById("change")
+        let img = document.getElementById("yaoshui")
+
+        //点击输入框
+    
+    input.onfocus = function(){
+        img.src="./《点燃我，温暖你》同款爱心代码MATLAB版_1_slandarer_来自小红书网页版.jpg"
+
+    }
+    //离开输入框
+    input.onblur = function(){
+        img.src='./《点燃我，温暖你》同款爱心代码MATLAB版_3_slandarer_来自小红书网页版 (1).jpg'
+    }
+   
+    //鼠标经过输入框
+    input.inmousobver = function(){
+        img.src='./星际城市mini90棕色割肉了_1_噗!都是毛_来自小红书网页版.jpg'
+    }
+
+    //鼠标离开输入框
+    input.onblur = function(){
+        img.src='./Chiikawa _ 好可爱的桌面iPad壁纸呀💕_1_啵啵_来自小红书网页版.jpg'
+    }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

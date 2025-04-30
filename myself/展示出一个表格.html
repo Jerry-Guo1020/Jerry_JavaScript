@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+
+table{
+    border-collapse: collapse ;
+    height: 80px;
+    width: 500px;
+
+}
+
+td{
+    padding: 5px;
+    text-align: center;
+}
+
+
+    table,tr,th,td{
+        border:1px solid black;
+        justify-self: center;
+    }
+</style>
+
+<body>
+    <h1>订单确认</h1>
+
+
+<script>
+    //用户输入
+    let name =prompt("请输入商品名称")
+    let price =+prompt("请输入商品价格")
+    let much =+prompt("请输入商品数量")
+    
+    let Location =prompt("请输入收货地址")
+    //计算总和
+
+    let total = price * much;
+    //打印出来
+
+document.write(
+    `<table>
+    <tr>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>商品数量</th>
+        <th>总价</th>
+        <th>收货地址</th>
+    </tr>
+
+
+    <tr>
+        <td>${name}</td>
+        <td>${price}</td>
+        <td>${much}</td>
+        <td>${total}</td>
+        <td>${Location}</td>
+    </tr>
+</table>
+`)
+
+</script>
+
+</body>
+</html>

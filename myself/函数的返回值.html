@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.求任意2个数中的最大值,并返回
+        // 1.求任意数组中的最大值并返回这个最大值
+        // 2.求任意数组中的最小值并返回这个最小值
+        // function aaa(num1, num2) {
+        //     if (num1 > num2){
+        //         console.log(num1);
+        //         return ;
+        //     } else {
+        //         console.log(num2);
+        //         return ;
+        //     }
+        // }
+        // let a = prompt(`请输入第一个值`);
+        // let b = prompt(`请输入第二个值`);
+        // aaa(a, b);
+
+
+
+
+        // 求一个数组的最大值并返回这个这个最大值用函数实现
+        function aaa(arr = []) {
+            //先准备这个数组的最大max
+            let max = arr[0];
+            //遍历比较
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {    //max就变换了
+                    max = arr[i];
+                }
+               
+                return max;
+                
+            }
+
+        }
+        let max = aaa([1, 2, 3, 4]);
+
+    </script>
+</body>
+
+</html>

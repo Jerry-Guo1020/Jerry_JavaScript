@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum = 0;
+        function aaa(start, end) {
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            console.log(sum);
+
+        }
+
+        let a = prompt(`请输入第一个数字`)
+        let b = prompt(`请输入第二个数字`)
+        a = parseInt(a)
+        b = parseInt(b)
+        aaa(a, b)
+    </script>
+</body>
+
+</html>

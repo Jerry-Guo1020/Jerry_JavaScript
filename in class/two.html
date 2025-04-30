@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+
+    </style>
+
+    <script>
+        //基本函数
+    function say() {
+        console.log("Hello");
+        
+        
+    }  
+//调用函数 say()
+    say();
+
+    //箭头函数-立即调用
+    (() => {
+        console.log("Hello");
+    })();
+
+    let arrowSay = ()=>{
+        console.log("hello,world2");
+        
+    }
+            arrowSay()
+
+    //箭头函数带参数
+    let arrowSayWithparam = (a,b)=>{
+        console.log();
+        
+    }
+    arrowSayWithparam("hello,world1")
+
+    //箭头函数-仅有一句执行代码时候自带 return 功能，花括号可以省略
+
+    let arrowSayWithReturn = () =>"地方肠杆菌科"
+console.log(arrowSayWithReturn);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

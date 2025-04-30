@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [5, 4, 3, 2, 1];
+        //先说有多少趟
+        // for (let i = 0; i < arr.length; i++) {
+        //     //再说一趟数字变几次
+        //     for (let j = 0; j < arr.length - i - 1; j++) {
+        //         //交换变量
+        //         if (arr[j] > arr[j + 1]) {
+        //             let temp = arr[j]
+        //             arr[j] = arr[j + 1]
+        //             arr[j + 1] = temp
+        //         }
+        //     }
+        // }
+
+
+
+        // //升序排序
+        // arr.sort(function(a,b){
+        //         return a-b;
+        // })
+
+        //降序排序
+        arr.sort(function (a, b) {
+            return b - a
+        })
+
+        console.log(arr);
+
+    </script>
+</body>
+
+</html>

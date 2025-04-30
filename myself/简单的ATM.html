@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let Money = 1000;
+
+        while (true) {
+            let choice = prompt(`
+    请选择您的所需要的项目：
+    1、存款 
+    2、取款  
+    3、查询余额 
+    4、退出`);
+
+            switch (choice) {
+                case "1":
+                    let money1 = prompt("请输入您需要存的金额");
+                    Money = Money + parseFloat(money1);
+                    alert(`存款成功，当前账户余额为：${Money}`);
+                    break;
+
+                case "2":
+                    let money2 = prompt("请输入您需要取的金额")
+                    Money = Money - parseFloat(money2);
+                    alert(`取款成功，当前账户余额为：${Money}`);
+                    break;
+
+                case "3":
+                    alert(`您当前余额为：${Money}`);
+                    break;
+
+
+                case "4":
+                    alert(`謝謝使用！`)
+                    break;
+
+                default:
+                    alert("请重新输入")
+                    continue;
+            }
+
+            if (choice === "4") {
+                break;
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

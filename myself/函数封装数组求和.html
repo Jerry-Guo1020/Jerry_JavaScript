@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 第一个案例，常量封装
+
+        // //封装一个函数
+        // function getarrSum(arr) {
+        //         let sum = 0;
+        //         for(let i =0; i<arr.length ; i++){
+        //             sum += arr[i]
+        //         }
+        //         console.log(sum);
+
+        // }
+        // getarrSum([1, 2, 3, 4, 5])
+        // getarrSum([1, 2, 3, 4, 5, 6, 7, 8])
+
+        // 第二个案例，变量封装
+        function getSum(n=0,m=0) {
+            let sum = 0;
+            for (let i = n; i <= m; i++) {
+                sum += i;
+            }
+            console.log(sum);
+
+        }
+
+        // getSum()
+        // getSum(1, 2)
+
+            let num1= +prompt(`请输入第一个数字`)
+            let num2= +prompt(`请输入最后的数字`)
+            getSum(num1,num2)
+
+</script>
+</body>
+
+</html>

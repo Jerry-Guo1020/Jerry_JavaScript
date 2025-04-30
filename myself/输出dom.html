@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            width: 300px;
+            height: 100px;
+            margin: 50px;
+        }
+        .test1 {
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        
+        .test2 {
+            position: relative;
+        }
+        .test2::before,
+        .test::after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+        .test2::before {
+            width: 1px;
+            height: 100px;
+            background-color: #000;
+            top: 0;
+            left: 0;
+        }
+        .test2::after {
+            width: 300px;
+            height: 1px;
+            background-color: #000;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="test test1"></div>
+        <div class="test test2"></div>
+    </div>
+    <!-- <script>
+        function addMyxiangfa(s) {
+            app.innerHTML += s;
+        }
+
+        addMyxiangfa(`<div style="height: 123px;">
+            <span>123</span>
+            <h4>第1季度</h4>
+        </div>`);
+    </script> -->
+</body>
+</html>
