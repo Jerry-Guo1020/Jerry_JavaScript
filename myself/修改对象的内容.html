@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">我是文字的内容</div>
+    <script>
+        const box = document.querySelector(`.box`)
+
+        //修改文字的内容
+        console.log(box.innerText);
+        console.log(box.innerHTML);
+        
+        box.innerText = `<strong>我是大帅哥</strong>`   //输出的内容是完全一致，不解析标签
+        box.innerHTML = `<strong>我是大帅 哥</strong>`   //输出的内容是可以解析标签        
+        
+    </script>
+</body>
+</html>

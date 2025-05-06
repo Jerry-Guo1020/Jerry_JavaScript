@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">hahaha</div>
+   <p id="nav">导航栏</p>
+    <ul>
+        <li>测试1</li>
+        <li>测试2</li>
+        <li>测试3</li>
+    </ul>
+    <script>
+        const box = document.querySelector(`div`)
+        console.log(box);
+
+        //使用ul和li标签弄出来打印出来css选择器（一般只能第一行
+        const li = document.querySelector(`ul li`)
+        console.log(li);
+
+        //使用ul和li标签弄出来打印出来css选择器（具体的那个内容
+        const liOne = document.querySelector(`ul li:nth-child(2)`)
+        console.log(liOne);
+        
+        const liAll = document.querySelectorAll(`ul li`)
+        console.log(liAll);
+
+        for(let i =0; i < liAll.length ; i++){
+            console.log(liAll[i]);
+            
+        }
+
+        const nav1 = document.querySelectorAll(`#nav`)
+        nav1[0].style.color = `red`        
+        
+
+    </script>
+</body>
+
+</html>
