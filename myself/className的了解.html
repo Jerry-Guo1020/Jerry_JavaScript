@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* 设置页面高度为视口高度 */
+            display: flex;
+            /* 使用 Flexbox 布局 */
+            justify-content: center;
+            /* 在水平方向居中 */
+            align-items: center;
+            /* 在垂直方向居中 */
+        }
+
+        .box {
+            background-color: pink;
+            width: 300px;
+            height: 200px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .nav {
+            background-color: blue;
+            width: 300px;
+            height: 200px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 什么是className以及跟class的区别：
+    class是HTML的属性，可以指定一个或多个类名，既可以使用css来弄样式属性，
+    也可以使用js来进行操作元素，例子： -->
+    <div class="box">123</div>
+
+
+    <script>
+        const box = document.querySelector(`div`)
+
+        // 法一：
+        box.style.backgroundColor = `green`
+
+        //法二：--遇到复杂多的情况是使用这个的
+        box.className = `nav`
+    </script>
+</body>
+
+</html>
