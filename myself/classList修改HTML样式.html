@@ -20,8 +20,28 @@
 <body>
 <div class="box">123</div>
     <script>
+        //1、获取元素
         const box = document.querySelector(`.box`)
-        box.classList.add(`active`)
+
+        //2、修改样式
+
+        // 2-1追加类 add()
+        // box.classList.add(`active`)
+
+        //2-2删除类 remove()
+        // box.classList.remove(`box`)
+        
+        // 2-3切换类 toggle() 
+        // box.classList.toggle(`active`)
+
+
+
+        // 一、className、class、classList三者的区别
+        // 1、class ： 他是html的一个元素属性，可以静态的定义类名
+        // 2、className：是在js中动态的进行操作class属性的html的元素,输出的类型是String字符窜类型
+        // 3、classList：输出的类型是数组
+
+        //二、判断该方法输出的类型的
     </script>
 </body>
 </html>

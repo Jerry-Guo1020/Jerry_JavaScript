@@ -49,17 +49,21 @@
     <!-- 什么是className以及跟class的区别：
     class是HTML的属性，可以指定一个或多个类名，既可以使用css来弄样式属性，
     也可以使用js来进行操作元素，例子： -->
-    <div class="box">123</div>
+    <div class="box box1 box2">123</div>
 
 
     <script>
         const box = document.querySelector(`div`)
 
-        // 法一：
-        box.style.backgroundColor = `green`
+        console.log(box.className, box.classList);
+        console.log(typeof box.className, typeof box.classList);
+        
 
-        //法二：--遇到复杂多的情况是使用这个的
-        box.className = `nav`
+        // // 法一：
+        // box.style.backgroundColor = `green`
+
+        // //法二：--遇到复杂多的情况是使用这个的
+        // box.className = `nav`
     </script>
 </body>
 
