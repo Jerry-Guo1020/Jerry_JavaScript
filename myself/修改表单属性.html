@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" value="电脑"> -->
+    <input type="checkbox" name="id">
+    <button>点击</button>
+    <script>
+        // 获取元素
+        // const uname = document.querySelector('input')
+        // 获取值 获取表单的里面的值是 表单.value
+        // console.log(uname.value);
+        // console.log(uname.innerHTML);
+
+        // 设置表单的值
+        // uname.value = '我要买电脑'
+
+        // // 设置表单的属性
+        // uname.type = 'password'
+
+        const ipt = document.querySelector('input')
+        ipt.checked = true;
+        // ipt.checked = false;
+        
+        // disabled————禁用
+        const button = document.querySelector('button')
+        button.disabled = true;
+        
+    </script>
+</body>
+</html>
