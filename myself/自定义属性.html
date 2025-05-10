@@ -6,14 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
+    <div data-id="1" data-spm="hahha">1</div>
+    <div data-id="2"></div>2</div>
+    <div data-id="3"></div>3</div>
+    <div data-id="4"></div>4</div>
+    <div data-id="5"></div>5</div>
 
     <script>
         const one = document.querySelector(`div`)
+         console.log(one.dataset);                 //显示全部的数据内容
+         console.log(one.dataset.id);              //显示id的内容
+         console.log(one.dataset.spm);             //显示spm的内容
          
     </script>
 </body>
