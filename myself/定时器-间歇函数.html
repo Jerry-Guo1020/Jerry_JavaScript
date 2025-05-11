@@ -12,15 +12,26 @@
         //     console.log(间隔时间);
         // }, 1000)
 
-        function fn() {
-            console.log('一秒执行一次');
+        // function fn() {
+        //     console.log('一秒执行一次');
             
-        }
-        // setInterval(fn, 1000)     //注意这个函数不需要加入小括号
+        // }
+        // // setInterval(fn, 1000)     //注意这个函数不需要加入小括号
 
-        let n = setInterval(fn, 1000)
-        console.log(n);
+        // let n = setInterval(fn, 1000)
+        // console.log(n);
+
+        // // 关闭定时器
+        // clearInterval(n)
         
+
+
+        //玩一个东西
+        let i = 1
+        setInterval(function() {
+            i++
+            document.write(`${i} `)
+        }, 200)
     </script>
 </body>
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图定点切换</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 560px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            height: 320px;
+        }
+
+        .slider-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .slider-footer {
+            height: 80px;
+            background-color: rgb(100, 67, 68);
+            padding: 12px 12px 0 12px;
+            position: relative;
+        }
+
+        .slider-footer .toggle {
+            position: absolute;
+            right: 0;
+            top: 12px;
+            display: flex;
+        }
+
+        .slider-footer .toggle button {
+            margin-right: 12px;
+            width: 28px;
+            height: 28px;
+            appearance: none;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .slider-footer .toggle button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .slider-footer p {
+            margin: 0;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .slider-indicator {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-indicator li {
+            width: 8px;
+            height: 8px;
+            margin: 4px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0.4;
+            cursor: pointer;
+        }
+
+        .slider-indicator li.active {
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <img src="/image/10.jpg" alt="" />
+        </div>
+        <div class="slider-footer">
+            <p>对人类来说会不会太超前了？</p>
+            <ul class="slider-indicator">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="toggle">
+                <button class="prev"><</button>
+                <button class="next">></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        //初始数据
+        const sliderData = [
+            { url: '/image/1.jpg', title: '我的天啊 1', color: 'rgb(255,0,0)' },
+            { url: '/image/2.jpg', title: '我的天啊 2', color: 'rgb(0,255,0)' },
+            { url: '/image/3.jpg', title: '我的天啊 3', color: 'rgb(0,0,255)' },
+            { url: '/image/4.jpg', title: '我的天啊 4', color: 'rgb(255,255,0)' },
+            { url: '/image/5.jpg', title: '我的天啊 5', color: 'rgb(255,0,255)' },
+            { url: '/image/6.jpg', title: '我的天啊 6', color: 'rgb(0,255,255)' },
+            { url: '/image/7.jpg', title: '我的天啊 7', color: 'rgb(128,128,128)' }
+        ]
+
+        //获取元素
+        const img = document.querySelector('.slider-wrapper img')
+        const p = document.querySelector('.slider-footer p')
+        let i = 0;
+
+        //开启定时器
+        console.log(sliderData[i]);
+        setInterval(function () {
+            i++
+            if (i >= sliderData.length) {
+                i = 0
+            }
+            // 更换照片的路径
+            img.src = sliderData[i].url
+
+            // 更改p标签的字体内容
+            p.innerHTML = sliderData[i].title
+
+            //小圆点
+            //先删除以前的active
+            document.querySelector('.slider-indicator .active').classList.remove('active')
+
+            //只让当前的li加入active
+            document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

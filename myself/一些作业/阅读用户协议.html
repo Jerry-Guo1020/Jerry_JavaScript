@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10">
+        用户注册协议：
+        欢迎您成为我们最坚实的用户，
+        在您注册过程中要看看追认过几日哦该活动日工卡缴纳
+    </textarea>
+    <br>
+    <button class="btn" disabled>已经阅读了这个协议(6)</button>
+    <script>
+         //获取元素
+         const btn = document.querySelector('.btn')
+         //倒计时
+         let i = 6;
+         //开启定时器
+         let n = setInterval(function() {
+            i--
+            btn.innerHTML = `已经阅读了这个协议(${i})`
+            if (i === 0) {
+                clearInterval(n)
+                // 定时器停止了，我就可以按钮了
+                btn.disabled = false;
+                btn.innerHTML = '同意'
+            }
+         }, 1000)
+    </script>
+</body>
+</html>
