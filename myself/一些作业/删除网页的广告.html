@@ -1,6 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
+<!-- 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,16 +40,11 @@
             <div class="content">我是广告</div>
             <div class="btn">X</div>
         </div>
-    </div>
-    <script>
-
-    </script>
-</body>
-
-</html> -->
+    </div>-->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +62,7 @@
       line-height: 200px;
       font-weight: 700;
     }
- 
+
     .box1 {
       position: absolute;
       right: 20px;
@@ -84,15 +77,22 @@
     }
   </style>
 </head>
- 
+
 <body>
   <div class="box">
     我是广告
     <div class="box1">X</div>
   </div>
   <script>
-   
+
+    const box1 = document.querySelector('.box1')
+    const box = document.querySelector('.box')
+
+
+    box1.addEventListener('click', function () {
+      box.style.display = 'none';
+    })
   </script>
 </body>
- 
+
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contanier {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        .box {
+            display: flex;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .span {
+            text-align: center;
+
+        }
+
+        .btn {
+            padding: 20px;
+        }
+
+        .btn .btn1_start {
+            width: 100px;
+            height: 50px;
+            background-color: chartreuse;
+            border-radius: 8px;
+            border: 0;
+            font-size: 20px;
+            margin: 30px;
+            cursor: pointer;
+
+        }
+
+        .btn .btn1_end {
+            width: 100px;
+            height: 50px;
+            background-color: chartreuse;
+            border-radius: 8px;
+            border: 0;
+            font-size: 20px;
+            margin: 30px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier">
+        <h1>随机点名哈哈哈</h1>
+        <div class="box">
+            <span>名字是：</span>
+            <div class="qs">这里显示姓名</div>
+        </div>
+        <div class="btn">
+            <button class="btn1_start">开始</button>
+            <button class="btn1_end">结束</button>
+        </div>
+
+    </div>
+    <script>
+        const arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        // 计时器也需要全局变量？这个意思是
+        let timeId = 0;
+        // 随机号要全局变量
+        let random = 0;
+        // 做出开始模块
+        const btn1 = document.querySelector('.btn1_start')
+        const qs = document.querySelector('.qs')
+
+        // 添加点击事件
+        btn1.addEventListener('click', function () {
+            timeId = setInterval(function () {
+                // 随机抽取数据
+                random = Math.floor(Math.random() * arr.length)
+                // console.log(arr[random]);
+                qs.innerHTML = arr[random]
+            }, 35)
+        })
+
+        // 关闭按钮的模块
+        const end = document.querySelector('.btn1_end')
+        end.addEventListener('click', function() {
+            clearInterval(timeId)
+            // 结束了，可以删除当前的抽到的元素
+            arr.splice(random, 1)
+            console.log(arr);
+            
+        })
+
+        // 如果数组只剩下一个了，最后的两个按钮要禁用
+        if (arr.length === 1) {
+            start.disabled = true;
+            end.disabled = true;
+            // 还有一种方法就是   start.disabled = end.disabled = true;
+        }
+
+    </script>
+</body>
+
+</html>
