@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>焦点事件案例搜索框的效果</title>
     <style>
         * {
             margin: 0;
@@ -74,6 +74,20 @@
         </ul>
     </div>
     <script>
+        const input = document.querySelector('[type=search]')
+        // console.log(input);
+        const ul = document.querySelector('.result-list')
+        // 监听事件 获得焦点
+        input.addEventListener('focus', function() {
+            ul.style.display = 'block'
+            input.classList.add('search')
+        })
+
+        // 监听事件 失去焦点
+        input.addEventListener('blur', function() {
+            ul.style.display = 'none'
+            input.classList.remove('search')
+        })
         
     </script>
 </body>
