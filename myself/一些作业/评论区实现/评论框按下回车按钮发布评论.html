@@ -146,9 +146,10 @@
               text.innerHTML = tx.value
               
             }
-            // 按下回车键请看你给文本框的内容
-            tx.value = ' '
-            
+            // 按下回车键清空你给文本框的内容
+            tx.value = ''
+            // 按下回车键之后字数显示的区域也是清空
+            total.innerHTML = "0/200字"
           }
         })
     </script>
