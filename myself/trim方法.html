@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- trim方法的使用： 去除前后句话的空格 -->
+ <textarea name="id" cols="30" rows="10" placeholder="您好"></textarea>
+    <script>
+        const str = '     pink'
+        console.log(str.trim());
+
+        const str2 = 'pink        '
+        console.log(str2.trim());
+
+        const tx = document.querySelector('textarea')
+        tx.addEventListener('keyup', function(e) {
+            
+            if (e.key === 'Enter') {
+                // console.log(tx.value);
+                console.log(tx.value.trim());
+                tx.value = ''
+            }
+
+            // 还有一个方法
+            
+            // if (e.key === 'Enter') {
+            //     console.log(tx.value.trim() === '');
+            // }
+        })
+        
+        
+    </script>
+</body>
+</html>

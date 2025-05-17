@@ -121,6 +121,7 @@
         const tx = document.querySelector('#tx')
         const total = document.querySelector('.total')
         const item = document.querySelector('.item')
+        const text = document.querySelector('.text')
 
         tx.addEventListener('focus', function() {
             total.style.opacity = 1
@@ -139,7 +140,14 @@
           // 只有按下回车键才回有触发
           if (e.key === 'Enter') {
             // console.log(11);
-            item.style.display = 'block'
+            if (tx.value.trim() !== '') {
+
+              item.style.display = 'block'
+              text.innerHTML = tx.value
+              
+            }
+            // 按下回车键请看你给文本框的内容
+            tx.value = ' '
             
           }
         })
