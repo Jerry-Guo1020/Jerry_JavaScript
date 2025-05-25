@@ -97,11 +97,12 @@
         })
 
         // 2、注册时间： 小按钮控制的大按钮，就是当小按钮全部都勾选了，那么大按钮也同时自动勾上
-        // for (let i = 0; i < cks.length; i++) {
-        //     cks[i].addEventListener('click', function(){
-        //         checkAll.checked = document.querySelectorAll('.ck:checked').length === cks.length
-        //     })
-        // }
+        for (let i = 0; i < cks.length; i++) {
+            cks[i].addEventListener('click', function(){
+            //    console.log(document.querySelectorAll('.ck:checked').length === cks.length);
+                checkAll.checked = document.querySelectorAll('.ck:checked').length === cks.length
+            })
+        }
     </script>
 </body>
 
