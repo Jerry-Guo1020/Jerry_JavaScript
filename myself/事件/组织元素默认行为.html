@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from action="https://www.baidu.com">
+        <input type="submit" value="免费注册"></input>
+    </from>
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener('submit', function(e) {
+            //阻止默认行为，提交
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>

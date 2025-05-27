@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>dianji</button>
+    <script>
+        //知识点内容 使用 load 事件 和 DOMContentLoaded 事件
+        // 区别：
+        // 1、load事件是监听整个的页面资源给Window
+        // 2、DOMContentLoaded事件是给 document加，无需等到样式表、图表都加载完成再进行执行
+        const btn = document.querySelector('button')
+        btn.addEventListener('load', function() {
+            alert('11')
+        })
+        
+    </script>
+</body>
+</html>

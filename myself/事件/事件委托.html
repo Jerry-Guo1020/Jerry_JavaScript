@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script>
+        //点击每一个小li，当前li的文字变成红色
+        //安装找时间委托的方式
+        const ul = document.querySelector('ul')
+        ul.addEventListener('click', function(e) {
+            // alert('11')
+            // this.style.color = 'red'   --这个this是指向父类，因此点一下全部都是会变红
+            // console.log(e);
+            // e.target.style.color = 'red'     //这个e是事件对象，然后target是选中的那个东西
+            if(e.target.tagName === 'LI') {
+                e.target.style.color = 'red' 
+            }
+        })
+    </script>
+</body>
+</html>
