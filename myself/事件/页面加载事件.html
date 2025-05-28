@@ -13,8 +13,13 @@
         // 1、load事件是监听整个的页面资源给Window
         // 2、DOMContentLoaded事件是给 document加，无需等到样式表、图表都加载完成再进行执行
         const btn = document.querySelector('button')
-        btn.addEventListener('load', function() {
+        btn.addEventListener('click', function() {
             alert('11')
+        })
+
+        window.addEventListener('load', function() {
+            console.log("所有页面已经加载完成~");
+            
         })
         
     </script>
