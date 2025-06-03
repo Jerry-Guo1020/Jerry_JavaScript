@@ -22,7 +22,7 @@
          let n = setInterval(function() {
             i--
             btn.innerHTML = `已经阅读了这个协议(${i})`
-            if (i === 0) {
+          if (i === 0) {
                 clearInterval(n)
                 // 定时器停止了，我就可以按钮了
                 btn.disabled = false;
