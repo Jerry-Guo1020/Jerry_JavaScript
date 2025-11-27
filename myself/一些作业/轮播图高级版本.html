@@ -1,217 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>轮播图的高级切换玩法</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>轮播图的高级切换玩法</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-        .slider {
-            width: 560px;
-            height: 400px;
-            overflow: hidden;
-        }
+            .slider {
+                width: 560px;
+                height: 400px;
+                overflow: hidden;
+            }
 
-        .slider-wrapper {
-            width: 100%;
-            height: 320px;
-        }
+            .slider-wrapper {
+                width: 100%;
+                height: 320px;
+            }
 
-        .slider-wrapper img {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
+            .slider-wrapper img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
 
-        .slider-footer {
-            height: 80px;
-            background-color: rgb(100, 67, 68);
-            padding: 12px 12px 0 12px;
-            position: relative;
-        }
+            .slider-footer {
+                height: 80px;
+                background-color: rgb(100, 67, 68);
+                padding: 12px 12px 0 12px;
+                position: relative;
+            }
 
-        .slider-footer .toggle {
-            position: absolute;
-            right: 0;
-            top: 12px;
-            display: flex;
-        }
+            .slider-footer .toggle {
+                position: absolute;
+                right: 0;
+                top: 12px;
+                display: flex;
+            }
 
-        .slider-footer .toggle button {
-            margin-right: 12px;
-            width: 28px;
-            height: 28px;
-            appearance: none;
-            border: none;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+            .slider-footer .toggle button {
+                margin-right: 12px;
+                width: 28px;
+                height: 28px;
+                appearance: none;
+                border: none;
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+            }
 
-        .slider-footer .toggle button:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
+            .slider-footer .toggle button:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
 
-        .slider-footer p {
-            margin: 0;
-            color: #fff;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+            .slider-footer p {
+                margin: 0;
+                color: #fff;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
 
-        .slider-indicator {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            align-items: center;
-        }
+            .slider-indicator {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                align-items: center;
+            }
 
-        .slider-indicator li {
-            width: 8px;
-            height: 8px;
-            margin: 4px;
-            border-radius: 50%;
-            background: #fff;
-            opacity: 0.4;
-            cursor: pointer;
-        }
+            .slider-indicator li {
+                width: 8px;
+                height: 8px;
+                margin: 4px;
+                border-radius: 50%;
+                background: #fff;
+                opacity: 0.4;
+                cursor: pointer;
+            }
 
-        .slider-indicator li.active {
-            width: 12px;
-            height: 12px;
-            opacity: 1;
-        }
-    </style>
-</head>
+            .slider-indicator li.active {
+                width: 12px;
+                height: 12px;
+                opacity: 1;
+            }
+        </style>
+    </head>
 
-<body>
-    <div class="slider">
-        <div class="slider-wrapper">
-            <img src="/image/10.jpg" alt="" />
-        </div>
-        <div class="slider-footer">
-            <p>对人类来说会不会太超前了？</p>
-            <ul class="slider-indicator">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="toggle">
-                <button class="prev"><</button>
-                <button class="next">></button>
+    <body>
+        <div class="slider">
+            <div class="slider-wrapper">
+                <img src="/image/10.jpg" alt="" />
+            </div>
+            <div class="slider-footer">
+                <p>对人类来说会不会太超前了？</p>
+                <ul class="slider-indicator">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="toggle">
+                    <button class="prev"><</button>
+                    <button class="next">></button>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        //初始数据
-        const Data = [
-            { url: '/image/1.jpg', title: '我的天啊 1', color: 'rgb(255,0,0)' },
-            { url: '/image/2.jpg', title: '我的天啊 2', color: 'rgb(0,255,0)' },
-            { url: '/image/3.jpg', title: '我的天啊 3', color: 'rgb(0,0,255)' },
-            { url: '/image/4.jpg', title: '我的天啊 4', color: 'rgb(255,255,0)' },
-            { url: '/image/5.jpg', title: '我的天啊 5', color: 'rgb(255,0,255)' },
-            { url: '/image/6.jpg', title: '我的天啊 6', color: 'rgb(0,255,255)' },
-            { url: '/image/7.jpg', title: '我的天啊 7', color: 'rgb(128,128,128)' }
-        ]
+        <script>
+            //初始数据
+            const Data = [
+                { url: '/image/1.jpg', title: '我的天啊 1', color: 'rgb(255,0,0)' },
+                { url: '/image/2.jpg', title: '我的天啊 2', color: 'rgb(0,255,0)' },
+                { url: '/image/3.jpg', title: '我的天啊 3', color: 'rgb(0,0,255)' },
+                { url: '/image/4.jpg', title: '我的天啊 4', color: 'rgb(255,255,0)' },
+                { url: '/image/5.jpg', title: '我的天啊 5', color: 'rgb(255,0,255)' },
+                { url: '/image/6.jpg', title: '我的天啊 6', color: 'rgb(0,255,255)' },
+                { url: '/image/7.jpg', title: '我的天啊 7', color: 'rgb(128,128,128)' }
+            ]
 
-        // 获取元素
-        let img = document.querySelector('.slider-wrapper img')
-        let p = document.querySelector('.slider-footer p')
-        let bg = document.querySelector('.slider-footer')
+            // 获取元素
+            let img = document.querySelector('.slider-wrapper img')
+            let p = document.querySelector('.slider-footer p')
+            let bg = document.querySelector('.slider-footer')
 
-        // 一、右侧按钮的操作
-        // 获取右侧按钮
-        const next = document.querySelector('.toggle .next')
-        let i = 0; // 信号量 控制播放图片的张数
-        next.addEventListener('click', function() {
-            // console.log("11");
-            i++
-             i = i >=Data.length ? 0 : i
-            // 得到对应的对象
-            // console.log(Data[i]);
+            // 一、右侧按钮的操作
+            // 获取右侧按钮
+            const next = document.querySelector('.toggle .next')
+            let i = 0; // 信号量 控制播放图片的张数
+            next.addEventListener('click', function() {
+                // console.log("11");
+                i++
+                i = i >=Data.length ? 0 : i
+                // 得到对应的对象
+                // console.log(Data[i]);
 
-            haha()
-        //     img.src = Data[i].url     
-        //     p.innerHTML = Data[i].title
-        //     bg.style.backgroundColor = Data[i].color
-        //    document.querySelector('.slider-indicator .active').classList.remove('active')
-        //    document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
-        })
-        
-        // 获取左侧按钮
-        const prev = document.querySelector('.toggle .prev')
-         prev.addEventListener('click', function() {
-            // console.log("11");
-            i--
-            // 判断条件
-            i = i <= -1 ? Data.length - 1 : i
-            // 得到对应的对象
-            // console.log(Data[i]);
+                haha()
+            //     img.src = Data[i].url     
+            //     p.innerHTML = Data[i].title
+            //     bg.style.backgroundColor = Data[i].color
+            //    document.querySelector('.slider-indicator .active').classList.remove('active')
+            //    document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+            })
+            
+            // 获取左侧按钮
+            const prev = document.querySelector('.toggle .prev')
+            prev.addEventListener('click', function() {
+                // console.log("11");
+                i--
+                // 判断条件
+                i = i <= -1 ? Data.length - 1 : i
+                // 得到对应的对象
+                // console.log(Data[i]);
 
-            haha()
-        //     img.src = Data[i].url     
-        //     p.innerHTML = Data[i].title
-        //     bg.style.backgroundColor = Data[i].color
-        //    document.querySelector('.slider-indicator .active').classList.remove('active')
-        //    document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
-        })
+                haha()
+            //     img.src = Data[i].url     
+            //     p.innerHTML = Data[i].title
+            //     bg.style.backgroundColor = Data[i].color
+            //    document.querySelector('.slider-indicator .active').classList.remove('active')
+            //    document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+            })
 
 
-        // 自动轮播
-        let timeID = setInterval(function() {
-            i++
-            if (i >= Data.length) {
-                i = 0
+            // 自动轮播
+            let timeID = setInterval(function() {
+                i++
+                if (i >= Data.length) {
+                    i = 0
+                }
+
+                haha()
+                // 更换照片
+                // img.src = Data[i].url
+                // p.innerHTML = Data[i].title
+                // bg.style.backgroundColor = Data[i].color
+                // document.querySelector('.slider-indicator .active').classList.remove('active')
+                // document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+            },1000)
+
+            function haha() {
+                img.src = Data[i].url
+                p.innerHTML = Data[i].title
+                bg.style.backgroundColor = Data[i].color
+                document.querySelector('.slider-indicator .active').classList.remove('active')
+                document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
             }
 
-            haha()
-            // 更换照片
-            // img.src = Data[i].url
-            // p.innerHTML = Data[i].title
-            // bg.style.backgroundColor = Data[i].color
-            // document.querySelector('.slider-indicator .active').classList.remove('active')
-            // document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
-        },1000)
 
-        function haha() {
-            img.src = Data[i].url
-            p.innerHTML = Data[i].title
-            bg.style.backgroundColor = Data[i].color
-            document.querySelector('.slider-indicator .active').classList.remove('active')
-            document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
-        }
+            // 鼠标经过大盒子，停止定时器
+            const stop = document.querySelector('.toggle')
+            stop.addEventListener('mouseenter', function() {
+                // 停止定时器
+                clearInterval(timeID)
+            })
 
+            // 鼠标离开大盒子，开启定时器
+            const start = document.querySelector('.toggle')
+            start.addEventListener('mouseleave', function() {
+                // 开启定时器
+                timeID = setInterval(function() {
+                i++
+                if (i >= Data.length) {
+                    i = 0
+                }
+                haha()
+            },1000)
+            })
+        </script>
+    </body>
 
-        // 鼠标经过大盒子，停止定时器
-        const stop = document.querySelector('.toggle')
-        stop.addEventListener('mouseenter', function() {
-            // 停止定时器
-            clearInterval(timeID)
-        })
-
-        // 鼠标离开大盒子，开启定时器
-        const start = document.querySelector('.toggle')
-        start.addEventListener('mouseleave', function() {
-            // 开启定时器
-            timeID = setInterval(function() {
-            i++
-            if (i >= Data.length) {
-                i = 0
-            }
-            haha()
-        },1000)
-        })
-    </script>
-</body>
-
-</html>
+    </html>

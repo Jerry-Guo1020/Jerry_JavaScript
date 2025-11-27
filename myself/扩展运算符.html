@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const aaa = ["aaa", "bbb", "ccc"]
+    const bbb = ["AAA","BBB","CCC"]
+    // 第一种：普通输出
+    console.log(aaa);
+
+    // 第二种：就是用上扩展运算符
+    console.log(...aaa);
+
+    // 第三种：还能够就是合并数组
+    const ccc = [...aaa, ...bbb];
+    console.log(ccc);
+
+    // 第四种：在合并数组的同时可以添加新的元素
+    const ddd = ["111", ...aaa, "222", ...bbb, "333"];
+    console.log(ddd);
+
+    
+</script>
+</html>

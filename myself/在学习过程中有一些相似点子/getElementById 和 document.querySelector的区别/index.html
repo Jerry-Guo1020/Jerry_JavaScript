@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这个是getElementById 和 document.querySelector的解释区别</title>
+</head>
+<body>
+    <!-- 1、选择器的类型：
+    (1)getElementById 
+    专门用于根据元素的is 属性值来进行查找元素，他只能通过 id查找 并且返回具有该 id的第一个元素 因为is 在文档中一般是唯一的
+
+    (2)document.querySelector
+    支持使用css选择器来进行修改元素，比如我可以通过这个东西来进行修改css的背景颜色呀还有字体颜色呀还有可以设置： display：none的隐藏等css的功能 -->
+
+    <div id="ep1">测试唯一id的div</div>
+    <div class="ep2">这是一个有共同类名的div</div>
+    <div class="ep2">这是另一个有共同类名的div</div>
+    <script>
+
+            // 使用getElementById
+            // const one = document.getElementById('ep1')
+            // console.log(one)
+            // console.log(ep1);
+            // console.log(one === ep1);
+            console.log(typeof ep1.innerHTML);
+            
+            
+            
+    </script>
+</body>
+</html>
