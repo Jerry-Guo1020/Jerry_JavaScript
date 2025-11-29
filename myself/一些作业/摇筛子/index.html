@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style rel="stylesheet" href="./style.css"></style>
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css"></link>
 </head>
+
 <body>
     <h1>掷骰子小游戏</h1>
+
+    <div class="contanier">
+        <input type="number" id="numInput" placeholder="请输入掷骰子次数" max="6" min="1" class="input" />
+        <button id="rollButton" onclick="handle()">掷骰子</button>
+        <div id="resultNum"></div>
+        <div id="resultImage"></div>
+    </div>
+    <script src="./index.js"></script>
 </body>
+
 </html>

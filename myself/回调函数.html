@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
 
+<body>
+    <h1 id="h1Result"></h1>
     <script>
-        function fn() {
-            console.log("回调函数");
+        // function fn() {
+        //     console.log("回调函数");
+        // }
+
+        // setInterval(fn,1000)
+        function sum(callback, x, y) {
+            let result = x + y;
+            callback(result)
         }
 
-        setInterval(fn,1000)
+        function displayConsole(result) {
+            console.log(result);
+        }
+
+        function displayPage(result) {
+            document.getElementById('h1Result').textContent = `当前的结果是:${result}`
+        }
+
+        sum(displayPage, 2, 1)
     </script>
 </body>
+
 </html>
