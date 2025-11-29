@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple", "banana", "orange", "strawbarry"]
+
+        fruits.forEach(upperCase)
+        fruits.forEach(display)
+
+        console.log(fruits);
+        function upperCase(element, index, array) {
+            // 全体大写
+            // array[index] = element.toUpperCase()
+
+            // 全体小写
+            // array[index] = element.toLowerCase()
+
+            // 首字母大写
+            array[index] = element.charAt(0).toUpperCase() + element.slice(1)
+            
+        }
+
+
+
+        function display(element) {
+            console.log(element);
+            
+        }
+        
+    </script>
+</body> 
+</html>
