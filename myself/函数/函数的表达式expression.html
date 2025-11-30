@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的表达式</title>
+</head>
+
+<body>
+    <script>
+        const nums = [1, 2, 3, 4, 5]
+
+        const squares = nums.map(function (element) {
+            return Math.pow(element, 2)
+        })
+        console.log("第一个" + squares);
+
+
+        const cubes = nums.map(cube)
+        function cube(element, nums) {
+            return Math.pow(element, 2)
+        }
+        console.log("第二个" + cubes)
+        console.log("第二个", cubes)
+        console.log(cubes)
+
+        const evenNums = nums.filter(function (element) {
+            return element % 2 === 0
+        })
+        console.log(evenNums);
+
+        const oddNums = nums.filter(function (element) {
+            return element % 2 !== 0
+        })
+        console.log(oddNums);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const prices = [5, 30, 10, 25, 15, 20]
+       const total  = prices.reduce(sum) 
+       console.log(total);
+       
+
+    //    accumulator是一个累加器
+       function sum(accumulator, element) {
+        return accumulator + element
+       }
+    </script>
+</body>
+</html>

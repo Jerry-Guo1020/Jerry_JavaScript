@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数声明的介绍</title>
+</head>
+<body>
+    <script>
+        // 第一种：直接写函数
+        function aaa() {
+            console.log("hello");
+        }
+        aaa()
+
+        // 第二种：命名函数，通过一个变量来实现
+        const BBB = function bbb() {
+            console.log("222");
+        }
+        BBB()
+
+        // 第三种：命名函数，然后匿名函数
+        const CCC = function() {
+            console.log("ccc");
+        }
+        CCC()
+
+        // 然后开始学习计时器的用法 setTimeout（）
+
+        // 方法一：
+        function ddd() {
+            console.log("ddd");
+        }
+        // 三秒后才出现
+        setTimeout(ddd,3000)
+
+        // 方法二：
+        const EEE = setTimeout(function eee() {
+            console.log("eee");
+            
+        },3000)
+    </script> 
+</body>
+</html>

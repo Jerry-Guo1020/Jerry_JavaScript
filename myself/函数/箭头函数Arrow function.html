@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <script>
+        // 箭头函数是一种简洁的编写函数表达式的方式。
+        // 他适用于你只使用一次简单的函数
+
+        // 一般的函数的写法是
+        function hello() {
+            console.log("hello1");
+        }
+        hello()
+
+        // 如果你用箭头函数的情况，就可以
+        // 第一种：
+        const bbb = () => console.log("hello2");
+        bbb()
+
+        // 第二种：我会用的
+        const ccc = (name) => { 
+            console.log(`hello ${name}`); 
+        }
+        ccc("jerry")
+
+        // 使用计时器的箭头函数
+        setTimeout( () => {
+            console.log("hellofsddsaf");
+        }, 3000)
+
+
+    </script>
+</body>
+
+</html>
