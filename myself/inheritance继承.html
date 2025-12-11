@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 继承：允许新类继承已有的类和方法
+        // class Animal {
+        //     alive = true
+
+        //     eat() {
+        //         console.log(`${this.name} is eating`);
+        //     }
+
+        //     sleep() {
+        //         console.log(`${this.name} is sleeping`);
+        //     }
+        // }
+
+        // class Rabbit extends Animal{
+        //     name = "rabbit"
+        // }
+
+        // class Lion extends Animal{
+        //     name ="lion"
+        // }
+
+        // const rabbit = new Rabbit()
+        // const lion = new Lion()
+
+        // rabbit.alive = false
+
+        // console.log(rabbit.alive);
+        // rabbit.eat()
+        // rabbit.sleep()
+
+
+
+        class Animal{
+            constructor(name, age, runspeed) {
+                // super()
+                this.name = name
+                this.age = age
+                // this.runspeed = runspeed
+            }
+        }
+
+        class fish extends Animal {
+            constructor(name, age, swimSpeed) {
+                super(name, age)
+                this.swimSpeed = swimSpeed
+            }
+        }
+
+        class rabbit extends Animal {
+             constructor(name, age, runspeed) {
+                super(name, age)
+                this.runspeed = runspeed
+            }
+        }
+    </script>
+</body>
+
+</html>

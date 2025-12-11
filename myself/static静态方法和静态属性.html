@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const 和 static 的区别
+        // 首先 const 是一个构造函数的方法，定义一个不可变量的常量值
+        // 然后 static 是一个类的静态属性，他的目的是因为了定义一个所有实例共享的，与类绑定的方法
+
+        class MathUntil{
+            static PI = 3.14
+
+            static getDiameter(redius){
+                return redius *2
+            }
+
+            static getcircumference(redius) {
+                return redius * this.PI *2
+            }
+        }
+
+        console.log(MathUntil.PI);
+        console.log(MathUntil.getDiameter(10));
+        console.log(MathUntil.getcircumference(10));
+        
+        class User {
+            static userCount = 0
+
+            constructor(username) {
+                this.username = username
+                User.userCount++
+            }
+
+            sayHello(){
+                console.log(`hello,my username is ${this.username}`);
+            }
+        }
+
+        const user1 = new User("haha1")
+
+        user1.sayHello()
+        console.log(user1.username);
+        console.log(User.userCount);
+        
+        
+    </script>
+</body>
+</html>
