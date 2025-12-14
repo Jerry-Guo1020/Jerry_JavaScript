@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Some {
+            constructor(height, width) {
+                this.height = height
+                this.width = width
+            }
+
+            set height(newHeight) {
+                if (newHeight > 0) {
+                    this._height = newHeight
+                } else {
+                    console.error(err);
+                }
+            }
+
+            set width(newWidth) {
+                if (newWidth > 0) {
+                    this._width = newWidth
+                } else {
+                    console.error(err);
+                }
+            }
+
+            get height() {
+                return this._height
+            }
+
+            get width() {
+                return this._width
+            }
+
+        }
+
+        const aaa = new Some(100, 200)
+        console.log(aaa.width, aaa.height)
+        console.log(aaa.width)
+    </script>
+</body>
+
+</html>
