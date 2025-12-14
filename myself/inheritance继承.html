@@ -41,28 +41,50 @@
 
 
 
-        class Animal{
+        class Animal {
             constructor(name, age, runspeed) {
                 // super()
                 this.name = name
                 this.age = age
                 // this.runspeed = runspeed
             }
+
+            move(speed) {
+                console.log(`the ${this.name} moies at a speed of ${speed} mph`);
+
+            }
         }
 
-        class fish extends Animal {
+        class Fish extends Animal {
             constructor(name, age, swimSpeed) {
                 super(name, age)
                 this.swimSpeed = swimSpeed
             }
+
+            swim() {
+                console.log(`this ${this.name} can swim`);
+
+            }
         }
 
-        class rabbit extends Animal {
-             constructor(name, age, runspeed) {
+        class Rabbit extends Animal {
+            constructor(name, age, runspeed) {
                 super(name, age)
                 this.runspeed = runspeed
             }
+            run() {
+                console.log(`this ${this.name} can run`);
+                super.move(this.runspeed)
+            }
+
         }
+
+        const rabbit = new Rabbit("rabbit", 1, 25)
+        const fish = new Fish("fish", 2, 35)
+
+
+        rabbit.run()
+        fish.swim()
     </script>
 </body>
 
